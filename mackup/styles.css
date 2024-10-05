@@ -1,0 +1,550 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header .logo {
+    height: 60px;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    top: 100%;
+    left: 0;
+    width: 200px;
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown li a {
+    padding: 10px 15px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.ruta {
+    display: inline-block;
+    width: calc(20% - 20px); /* Para 5 rutas por fila con margen de 20px */
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    vertical-align: top;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ruta:hover {
+    transform: scale(1.05);
+    color: #008cff;
+}
+
+.ruta img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: 200px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    display: block;
+    margin: 0 auto;
+}
+
+.ruta h4 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.ruta p {
+    font-size: 16px;
+    margin: 5px 0 10px 0;
+}
+
+.ruta button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: block;
+    margin: 5px auto;
+}
+
+.ruta button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+footer .logo {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.bienvenida {
+    position: relative;
+    width: 100%;
+    height: auto; /* Ajuste automático de la altura */
+    background-image: url('images/inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bienvenida-contenedor {
+    color: white;
+    max-width: 90%;
+    text-align: center;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.bienvenida .eslogan {
+    font-size: 24px;
+    font-style: italic;
+    color: #008cff;
+}
+
+#catalogo {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+#catalogo h2, #catalogo h3 {
+    text-align: center;
+    color: #333;
+}
+
+#catalogo h2 {
+    font-size: 3em;
+}
+
+#catalogo-rutas, #catalogo-hexagonal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#horario {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#horario h2, #horario h3 {
+    text-align: center;
+    color: #333;
+}
+
+#horario h2 {
+    font-size: 3em;
+}
+
+.horario-img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen en su contenedor */
+  }
+
+#peces {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+#peces h2, #peces h3 {
+    text-align: center;
+    color: #333;
+}
+
+#peces h2 {
+    font-size: 3em;
+}
+
+/* Estilos para la sección de contacto */
+#contacto {
+    padding: 40px 20px;
+    background-color: #2b2b2b;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#contacto h2 {
+    font-size: 3em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.2em;
+    color: #a8a8a8;
+    margin-bottom: 30px;
+}
+
+.contacto-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contacto-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #c0e1e7;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contacto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.contacto-item a, .contacto-item span {
+    font-size: 1.1em;
+    color: #333;
+    text-decoration: none;
+}
+
+.contacto-item a:hover {
+    color: #008cff;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Ajusta el ancho del modal */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.detalle {
+    margin-bottom: 20px;
+}
+
+.detalle-texto {
+    text-align: center;
+}
+
+.detalle-img {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente */
+    max-height: 400px; /* Ajusta la altura máxima para evitar imágenes demasiado grandes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    display: block;
+    margin: 0 auto;
+}
+
+.ruta button {
+    display: block;
+    margin: 5px auto;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .bienvenida {
+        height: auto; /* Ajuste automático de la altura */
+        padding: 10px;
+    }
+
+    .bienvenida-contenedor {
+        font-size: 1.5em; /* Ajustar el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    .bienvenida .eslogan {
+        font-size: 1em; /* Ajustar el tamaño del eslogan para pantallas más pequeñas */
+    }
+
+    .ruta {
+        width: calc(50% - 20px); /* Para 2 rutas por fila con margen de 20px */
+    }
+
+    .contacto-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contacto-item {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bienvenida {
+        padding: 5px;
+    }
+
+    .bienvenida-contenedor {
+        font-size: 1.2em; /* Ajustar el tamaño de la fuente para pantallas muy pequeñas */
+    }
+
+    .bienvenida .eslogan {
+        font-size: 0.9em; /* Ajustar el tamaño del eslogan para pantallas muy pequeñas */
+    }
+
+    .ruta {
+        width: calc(100% - 20px); /* Para 1 ruta por fila con margen de 20px */
+    }
+}
+
+/* Estilo para la sección de incidencias */
+#incidencias {
+    text-align: center; /* Centra el contenido en el contenedor */
+    padding: 20px; /* Espaciado alrededor del contenido */
+    background-color: #f9f9f9; /* Fondo claro para la sección */
+    border-radius: 8px; /* Bordes redondeados para la sección */
+}
+
+/* Contenedor del formulario */
+.form-container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Bordes redondeados para el formulario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilo para los grupos de formulario */
+.form-group {
+    margin-bottom: 15px; /* Espaciado entre los grupos */
+    text-align: left; /* Alinea el texto a la izquierda dentro del grupo */
+}
+
+/* Etiquetas del formulario */
+.form-group label {
+    display: block; /* Muestra las etiquetas en bloque */
+    margin-bottom: 5px; /* Espaciado debajo de las etiquetas */
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+
+/* Campos de texto y área de texto */
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="file"] {
+    width: 100%; /* Ancho completo del contenedor del grupo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el espaciado y borde en el ancho total */
+}
+
+/* Área de texto específica */
+.form-group textarea {
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+    min-height: 100px; /* Altura mínima para el área de texto */
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el botón en hover */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+/* Mensaje de confirmación */
+.confirmacion {
+    margin-top: 20px; /* Espaciado arriba del mensaje */
+    padding: 10px; /* Espaciado interno */
+    background-color: #d4edda; /* Fondo verde claro */
+    color: #155724; /* Texto verde oscuro */
+    border: 1px solid #c3e6cb; /* Borde verde claro */
+    border-radius: 4px; /* Bordes redondeados */
+    display: none; /* Oculta el mensaje por defecto */
+}
+
+/* Estilo para la sección de contacto */
+#contacto {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 20px; /* Espaciado alrededor */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto en el contenedor */
+}
+
+/* Contenedor del contacto */
+.contacto-container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Información de contacto */
+.contacto-info {
+    margin-bottom: 20px; /* Espaciado debajo de la información de contacto */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.contacto-info p {
+    margin: 10px 0; /* Espaciado arriba y abajo de los párrafos */
+    display: flex; /* Usa flexbox para alinear íconos y texto */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+
+.contacto-info i {
+    font-size: 24px; /* Tamaño de los íconos */
+    margin-right: 10px; /* Espaciado a la derecha del ícono */
+    color: #007bff; /* Color azul para los íconos */
+}
+
+.contacto-info a {
+    color: #007bff; /* Color azul para los enlaces */
+    text-decoration: none; /* Sin subrayado en los enlaces */
+}
+
+.contacto-info a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}
+
+/* Estilo para los grupos de formulario */
+.form-group {
+    margin-bottom: 15px; /* Espaciado entre los grupos */
+    text-align: left; /* Alinea el texto a la izquierda dentro del grupo */
+}
+
+/* Etiquetas del formulario */
+.form-group label {
+    display: block; /* Muestra las etiquetas en bloque */
+    margin-bottom: 5px; /* Espaciado debajo de las etiquetas */
+    font-weight: bold; /* Negrita para las etiquetas */
+}
+
+/* Campos de texto y área de texto */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Ancho completo del contenedor del grupo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el espaciado y borde en el ancho total */
+}
+
+/* Área de texto específica */
+.form-group textarea {
+    resize: vertical; /* Permite cambiar el tamaño verticalmente */
+    min-height: 100px; /* Altura mínima para el área de texto */
+}
+
+/* Botón de envío */
+button[type="submit"] {
+    background-color: #007bff; /* Color de fondo azul */
+    color: #000000; /* Color del texto blanco */
+    border: none; /* Elimina el borde del botón */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el botón en hover */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+section#informacion {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+section#informacion h2 {
+    font-size: 28px;
+    
+}
+
+section#informacion p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+
+}

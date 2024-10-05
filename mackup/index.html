@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMSA - Sistema de Transporte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="nav.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+    <img src="images/logo_omsa.png" alt="Logo de OMSA" class="logo">
+    <div class="sidebar">
+        <div class="logo-details">
+            <div class="logo_name">OMSA</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="#home">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Inicio</span>
+                </a>
+                <span class="tooltip">Inicio</span>
+            </li>
+            <li>
+                <a href="#catalogo">
+                    <i class='bx bx-collection'></i>
+                    <span class="links_name">Rutas</span>
+                </a>
+                <span class="tooltip">Rutas</span>
+            </li>
+            <li>
+                <a href="#horario">
+                    <i class='bx bx-time-five'></i>
+                    <span class="links_name">Horarios</span>
+                </a>
+                <span class="tooltip">Horarios</span>
+            </li>
+            <li>
+                <a href="#incidencias">
+                    <i class='bx bx-error'></i>
+                    <span class="links_name">Incidencias</span>
+                </a>
+                <span class="tooltip">Incidencias</span>
+            </li>
+            <li>
+                <a href="#contacto">
+                    <i class='bx bx-phone'></i>
+                    <span class="links_name">Contacto</span>
+                </a>
+                <span class="tooltip">Contacto</span>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<section class="home-section">
+    <main>
+        <section class="bienvenida" id="home">
+            <div class="bienvenida-contenedor">
+                <h1>¡Bienvenido!</h1>
+                <p class="eslogan">Consulta rutas y horarios, compra boletos, y reporta incidencias fácilmente.</p>
+            </div>
+        </section>
+        <section id="informacion">
+            <h2>Información sobre OMSA</h2>
+            <p>La Oficina Metropolitana de Servicios de Autobuses (OMSA) creada con la finalidad de brindar el servicio de preparación, mantenimiento, reparación y despacho de la flota de autobuses de transporte público siendo reconocida como la institución líder en materia de transporte público metropolitano de la República, dando a los usuarios un servicio de transporte de calidad, eficiente y seguro a un costo asequible.</p>
+        </section>
+        <section id="catalogo">
+            <h2>Rutas</h2>
+            <h3>Consulta las rutas disponibles de nuestros autobuses.</h3>
+            <div id="catalogo-rutas">
+                <div class="ruta">
+                    <img src="images/catalogo/ruta1.png" alt="Ruta1">
+                    <h4>Ruta 1</h4>
+                    <p>Villa Mella hasta Puente Juan Carlos</p>
+                    <button onclick="openModal('ruta1')">Más detalles</button>
+                </div>
+
+                <div class="ruta">
+                    <img src="images/catalogo/ruta2.png" alt="Ruta2">
+                    <h4>Ruta 2</h4>
+                    <p>Los Tres Brazos hasta MegaCentro</p>
+                    <button onclick="openModal('ruta2')">Más detalles</button>
+                </div>
+
+                <div class="ruta">
+                    <img src="images/catalogo/ruta3.png" alt="Ruta3">
+                    <h4>Ruta 3</h4>
+                    <p>Autopista San Isidro hasta Puente Duarte</p>
+                    <button onclick="openModal('ruta3')">Más detalles</button>
+                </div>
+
+                <div class="ruta">
+                    <img src="images/catalogo/ruta4.png" alt="Ruta4">
+                    <h4>Ruta 4</h4>
+                    <p>Ciudad Juan Bosch hasta Faro a Colón</p>
+                    <button onclick="openModal('ruta4')">Más detalles</button>
+                </div>
+
+                <div class="ruta">
+                    <img src="images/catalogo/ruta5.png" alt="Ruta5">
+                    <h4>Ruta 5</h4>
+                    <p>Carretera Mella hasta Av. 27 de Febrero Proximo Av. Tiradentes</p>
+                    <button onclick="openModal('ruta5')">Más detalles</button>
+                </div>
+
+                <!-- Modales para las rutas -->
+                <div id="ruta1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('ruta1')">&times;</span>
+                        <h2>Desde Villa Mella hasta Puente Juan Carlos</h2>
+                        <div class="detalle">
+                            <img src="images/catalogo/ruta1.png" alt="Tipo A" class="detalle-img">
+                            <div class="detalle-texto">
+                                <p>Ruta desde villa mella hasta el puente Juan carlos</p>
+                            </div>
+                        </div>
+                        <div class="detalle">
+                            
+                            <div class="detalle-texto">
+                            </div>
+                        </div>
+                        <div class="detalle">
+                            <div class="detalle-texto">
+                            </div>
+                        </div>
+                        <div class="detalle">
+                         
+                            <div class="detalle-texto">
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ruta2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('ruta2')">&times;</span>
+                        <h2>Desde Los Tres Brazos hasta MegaCentro</h2>
+                        <div class="detalle">
+                            <img src="images/catalogo/ruta2.png" alt="Tipo A" class="detalle-img">
+                            <div class="detalle-texto">
+                              
+                                <p>LOS TRES BRAZOS</p>
+                            </div>
+                        </div>
+                        <div class="detalle">
+                            <div class="detalle-texto">
+                                
+                            </div>
+                        </div>
+                        <div class="detalle">
+                            <div class="detalle-texto">
+                               
+                            </div>
+                        </div>
+                        <div class="detalle">
+                          
+                            <div class="detalle-texto">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ruta3" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('ruta3')">&times;</span>
+                        <h2>Desde Autopista San Isidro hasta Puente Duarte</h2>
+                        <div class="detalle">
+                            <img src="images/catalogo/ruta3.png" alt="Tipo A" class="detalle-img">
+                            <div class="detalle-texto">
+                             
+                                <p>AUTOPISTA SAN ISIDRO</p>
+                            </div>
+                        </div>
+                        <div class="detalle">
+                        
+                            <div class="detalle-texto">
+                                
+                            </div>
+                        </div>
+                        <div class="detalle">
+                            <div class="detalle-texto">
+                              
+                            </div>
+                        </div>
+                        <div class="detalle">
+                        
+                            <div class="detalle-texto">
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ruta4" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('ruta4')">&times;</span>
+                        <h2>Desde Ciudad Juan Bosch hasta Faro a Colón</h2>
+                        <div class="detalle">
+                            <img src="images/catalogo/ruta4.png" alt="Tipo A" class="detalle-img">
+                            <div class="detalle-texto">
+                                
+                                <p>CIUDAD JUAN BOSCH</p>
+                            </div>
+                        </div>
+                        <div class="detalle">
+                          
+                            <div class="detalle-texto">
+                                
+                            </div>
+                        </div>
+                        <div class="detalle">
+                            <div class="detalle-texto">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ruta5" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('ruta5')">&times;</span>
+                        <h2>Desde Carretera Mella hasta Av. 27 de Febrero Proximo Av. Tiradentes</h2>
+                        <div class="detalle">
+                            <img src="images/catalogo/ruta5.png" alt="Tipo A" class="detalle-img">
+                            <div class="detalle-texto">
+                                
+                                <p>CARRETERA MELLA</p>
+                            </div>
+                        </div>
+                        <div class="detalle">
+                          
+                            <div class="detalle-texto">
+                                
+                            </div>
+                        </div>
+                        <div class="detalle">
+                            <div class="detalle-texto">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="horario">
+            <h2>Ruta de Horario General</h2>
+            <img src="images/catalogo/horario.png" alt="Horario de Autobuses" class="horario-img">
+        </section>
+
+        <section id="incidencias">
+            <h2>Reporta Incidencias</h2>
+            <h3>En caso de problemas con el servicio, por favor, repórtalos aquí.</h3>
+            <div class="form-container">
+                <form id="form-incidencia" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="titulo">Título:</label>
+                        <input type="text" id="titulo" name="titulo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="foto">Foto (opcional):</label>
+                        <input type="file" id="foto" name="foto">
+                    </div>
+                    
+                    <button type="submit">Enviar Incidencia</button>
+                </form>
+                <div id="confirmacion" class="confirmacion">
+                    <p>¡Gracias por reportar! Tu incidencia ha sido registrada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="contacto-container">
+                <h2>Contacto</h2>
+                <h3>Si tienes alguna pregunta, no dudes en contactarnos.</h3>
+                <div class="contacto-info">
+                    <p><i class='bx bx-phone'></i> Teléfono: <a href="tel:+123456789">+1 234 567 89</a></p>
+                    <p><i class='bx bx-envelope'></i> Email: <a href="mailto:info@omsa.com">info@omsa.com</a></p>
+                </div>
+                <form id="form-contacto" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
